@@ -1,12 +1,21 @@
 .card {
-  padding: 1.25rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  background-color: #ffffff;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: #9ca3af;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .badge {
@@ -37,4 +46,35 @@
 .speakerName {
   font-weight: 500;
   color: #1f2937;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.favCount {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #d97706;
+  background-color: #fef3c7;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.favouriteBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.625rem;
+  background-color: #fef2f2;
+  color: #dc2626;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: 1px solid #fee2e2;
 }

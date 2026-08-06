@@ -5,42 +5,48 @@
       "title": "Server Components in Practice",
       "speaker": "Mei Ling",
       "track": "Frontend",
-      "abstract": "A tour of what changes when data fetching moves to the server."
+      "abstract": "A tour of what changes when data fetching moves to the server.",
+      "favouriteCount": 142
     },
     {
       "id": "2",
       "title": "Designing REST APIs That Last",
       "speaker": "Arjun Patel",
       "track": "Backend",
-      "abstract": "Lessons from ten years of versioning APIs without breaking clients."
+      "abstract": "Lessons from ten years of versioning APIs without breaking clients.",
+      "favouriteCount": 98
     },
     {
       "id": "3",
       "title": "State Management Without the Ceremony",
       "speaker": "Farah Osman",
       "track": "Frontend",
-      "abstract": "When Context is enough, and when it is not."
+      "abstract": "When Context is enough, and when it is not.",
+      "favouriteCount": 76
     },
     {
       "id": "4",
       "title": "Zero-Downtime Database Migrations",
       "speaker": "Wei Jie Tan",
       "track": "Backend",
-      "abstract": "A practical checklist for changing schema under live traffic."
+      "abstract": "A practical checklist for changing schema under live traffic.",
+      "favouriteCount": 540
     },
     {
       "id": "5",
       "title": "Accessible by Default",
       "speaker": "Priya Nair",
       "track": "Design",
-      "abstract": "Building components that pass an audit without a separate accessibility pass."
+      "abstract": "Building components that pass an audit without a separate accessibility pass.",
+      "favouriteCount": 133
     },
     {
       "id": "6",
       "title": "Design Tokens Across Platforms",
       "speaker": "Daniel Goh",
       "track": "Design",
-      "abstract": "Keeping a single source of truth for colour and spacing across web and mobile."
+      "abstract": "Keeping a single source of truth for colour and spacing across web and mobile.",
+      "favouriteCount": 47
     }
   ]
 }

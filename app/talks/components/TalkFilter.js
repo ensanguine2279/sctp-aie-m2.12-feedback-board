@@ -8,10 +8,12 @@ export default function TalkFilter({
   setSelectedTrack,
   searchQuery,
   setSearchQuery,
+  sortBy,
+  onSortChange,
 }) {
   return (
     <div className={styles.container}>
-      {/* Controls Bar */}
+      {/* Track filter buttons */}
       <div className={styles.controlsBar}>
         <div className={styles.searchInputWrapper}>
           <input
@@ -24,17 +26,37 @@ export default function TalkFilter({
         </div>
 
         <div className={styles.filterGroup}>
-          {uniqueTracks.map((track) => (
-            <button
-              key={track}
-              onClick={() => setSelectedTrack(track)}
-              className={`${styles.filterButton} ${
-                selectedTrack === track ? styles.activeButton : ""
-              }`}
-            >
-              {track}
-            </button>
-          ))}
+          <label htmlFor="trackSelect" className={styles.filterLabel}>
+            Track:
+          </label>
+          <select
+            id="trackSelect"
+            value={selectedTrack}
+            onChange={(e) => setSelectedTrack(e.target.value)}
+            className={styles.filterSelect}
+          >
+            {uniqueTracks.map((track) => (
+              <option key={track} value={track}>
+                {track}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Sort selection */}
+        <div className={styles.sortGroup}>
+          <label htmlFor="sortSelect" className={styles.sortLabel}>
+            Sort by:
+          </label>
+          <select
+            id="sortSelect"
+            value={sortBy}
+            onChange={(e) => onSortChange(e.target.value)}
+            className={styles.sortSelect}
+          >
+            <option value="default">Default</option>
+            <option value="popular">Most popular</option>
+          </select>
         </div>
       </div>
     </div>

@@ -8,6 +8,11 @@ export default function TalkCard({ talk }) {
       <div className={styles.card}>
         <div>
           <span className={styles.badge}>{talk.track}</span>
+          {talk.favouriteCount !== undefined && (
+            <span className={styles.favouriteBadge}>
+              ❤️ {talk.favouriteCount}
+            </span>
+          )}
           <h3 className={styles.cardTitle}>{talk.title}</h3>
         </div>
         <p className={styles.cardFooter}>
