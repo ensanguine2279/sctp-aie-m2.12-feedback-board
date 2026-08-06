@@ -1,10 +1,8 @@
-import TrackFilter from "./components/TrackFilter";
+import TalkContainer from "./components/TalkContainer";
 
 import styles from "./page.module.css";
 
 async function getTalks() {
-  console.log(`Fetching talks from the server... ${process.env.API_BASE_URL}`);
-
   const res = await fetch(`${process.env.API_BASE_URL}/talks`, {
     cache: "no-store",
   });
@@ -19,10 +17,12 @@ async function getTalks() {
 export default async function TalksPage() {
   const talks = await getTalks();
 
+  //console.log("Fetched talks:", talks); // Log the fetched talks for debugging
+
   return (
     <div className={styles.container}>
       <h1 className={styles.heading}>Conference Talks</h1>
-      <TrackFilter talks={talks} />
+      <TalkContainer initialTalks={talks} />
     </div>
   );
 }
