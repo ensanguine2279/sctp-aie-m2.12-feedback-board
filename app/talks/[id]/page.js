@@ -1,41 +1,29 @@
-import Link from "next/link";
-import styles from "./page.module.css";
+import { notFound } from "next/navigation";
 
-async function getTalk(id) {
-  const res = await fetch(`${process.env.API_BASE_URL}/talks/${id}`, {
+import TalkDetailsClient from "./TalkDetailsClient";
+
+import { getRandomSpeakerPhoto } from "../../utils/fetchSpeakerPhoto";
+
+async function getTalkById(id) {
+  const response = await fetch(`${process.env.API_BASE_URL}/talks/${id}`, {
     cache: "no-store",
   });
 
-  if (!res.ok) {
+  if (response.status === 404) {
+    notFound();
+  }
+
+  if (!response.ok) {
     throw new Error("Failed to fetch talk details.");
   }
 
-  return res.json();
+  return response.json();
 }
 
-export default async function TalkDetailPage({ params }) {
+export default async function TalkDetailsPage({ params }) {
   const { id } = await params;
-  const talk = await getTalk(id);
+  const talk = await getTalkById(id);
+  const avatarUrl = await getRandomSpeakerPhoto();
 
-  return (
-    <div className={styles.container}>
-      <Link href="/talks" className={styles.backLink}>
-        &larr; Back to all talks
-      </Link>
-
-      <h1 className={styles.title}>{talk.title}</h1>
-
-      <p className={styles.meta}>
-        <strong>Speaker:</strong> {talk.speaker}
-      </p>
-      <p className={styles.meta}>
-        <strong>Track:</strong> {talk.track}
-      </p>
-
-      <hr className={styles.divider} />
-
-      <h3 className={styles.sectionTitle}>Abstract</h3>
-      <p className={styles.abstract}>{talk.abstract}</p>
-    </div>
-  );
+  return <TalkDetailsClient talk={talk} avatarUrl={avatarUrl} />;
 }
