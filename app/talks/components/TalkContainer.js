@@ -10,7 +10,7 @@ export default function TalkContainer({ initialTalks }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("default");
 
-  console.log("Rendering TalkContainer with initialTalks:", initialTalks);
+  //console.log("Rendering TalkContainer with initialTalks:", initialTalks);
 
   const filteredTalks = useMemo(() => {
     return initialTalks
