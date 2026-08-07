@@ -14,7 +14,50 @@ A multi-page Next.js application that:
 - Shows an error page with a retry button if json-server is unreachable
 - Lets a visitor filter the talk list by track using a Client Component, without a new network request
 
+## How To Install And Run
+
+### Prerequisites
+
+- Node.js 18+
+- npm 9+
+
+### Install
+
+```bash
+npm install
+```
+
+### Run in development mode
+
+```bash
+npm run dev
+```
+
+Both NextJS and JSON servers must be running.
+
+Open the app at the local URL shown in your terminal (i.e. `http://127.0.0.1:5173` or similar).
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+### Run JSON server
+
+```bash
+npm run server
+```
+
 <br/><br/>
+
+### Notes
 
 <details>
     <summary>Assignment Details</summary>
