@@ -2,6 +2,12 @@ import TalkContainer from "./components/TalkContainer";
 
 import styles from "./page.module.css";
 
+export const metadata = {
+  title: "Event Talks & Sessions",
+  description:
+    "Browse and filter all available conference talks, tracks, and speaker schedules.",
+};
+
 async function getTalks() {
   const res = await fetch(`${process.env.API_BASE_URL}/talks`, {
     cache: "no-store",
