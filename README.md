@@ -79,11 +79,11 @@ npm run server
 
 ### Talk list loading
 
-- [![Watch talk list loading demo on YouTube](https://img.shields.io/badge/Watch%20talk%20list%20loading%20demo%20on%20YouTube-FF0000?logo=youtube&logoColor=white)](https://youtu.be/j6d0lF260C8)
+[![Watch talk list loading demo on YouTube](https://img.shields.io/badge/Watch%20talk%20list%20loading%20demo%20on%20YouTube-FF0000?logo=youtube&logoColor=white)](https://youtu.be/j6d0lF260C8)
 
 ### Loading spinner appearing when network throttled
 
-- [![Watch loading spinner demo on YouTube](https://img.shields.io/badge/Watch%20loading%20spinner%20demo%20on%20YouTube-FF0000?logo=youtube&logoColor=white)](https://youtu.be/QvfsQc9lC5Y)
+[![Watch loading spinner demo on YouTube](https://img.shields.io/badge/Watch%20loading%20spinner%20demo%20on%20YouTube-FF0000?logo=youtube&logoColor=white)](https://youtu.be/QvfsQc9lC5Y)
 
 <br/>
 
