@@ -87,7 +87,7 @@ npm run server
 
 <br/>
 
-- <details>
+<details>
       <summary>Assignment Details</summary>
 
 ## Requirements
