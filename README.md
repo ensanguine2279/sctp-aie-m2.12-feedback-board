@@ -57,10 +57,30 @@ npm run server
 
 <br/><br/>
 
-### Notes
+## Notes
 
-<details>
-    <summary>Assignment Details</summary>
+### Speaker photo on talk details page
+
+- A `utils\getRandomSpeakerPhoto` utility function was created to help fetch a random URL of a person's photo from `https://randomuser.me/api`
+
+- If the API fails, the function return a fallback avatar image `/images/default-avatar.png`
+
+### Recovering when `json-server` is down
+
+- The error (`json-server` stopped) is happening in the Server Component work, not just local client state.
+
+- Sometimes the server-side payload/cache state remains, effectively, the same (even after `reset()`), this causes the app to fall back into the same failure.
+
+- In these cases, refreshing the React Server Component (RSC) with `router.refresh()` helps because:
+  1. Requests a new Server Component payload for the current route.
+  2. Re-runs server data fetching for that route segment.
+  3. Revalidates against current backend state (for example, API recovered, env fixed, remote image source available).
+  4. Makes retry behavior closer to what a full browser reload does, but inside Next navigation.
+
+[![Watch Feature Demo on YouTube](https://img.shields.io/badge/Watch%20Feature%20Demo%20on%20YouTube-FF0000?logo=youtube&logoColor=white)](https://youtu.be/QvfsQc9lC5Y)
+
+- <details>
+      <summary>Assignment Details</summary>
 
 ## Requirements
 
